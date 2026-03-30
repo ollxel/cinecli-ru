@@ -48,7 +48,7 @@ def build_magnet(hash_: str, name: str) -> str:
 def get_magnet(torrent, username: str, password: str, cookie: str | None = None) -> str:
     """Return a clean magnet link, resolving hash from topic page if needed."""
     if not torrent.hash:
-        from cinecli.api import resolve_hash
+        from cinecli_ru.api import resolve_hash
         resolve_hash(torrent, username, password, cookie)
     return build_magnet(torrent.hash, torrent.title or "")
 

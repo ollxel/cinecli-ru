@@ -44,10 +44,10 @@ dev = ["pytest>=7.4.0", "pytest-cov>=4.1.0", "black>=23.0.0", "ruff>=0.1.0", "my
 cinecli-ru = "cinecli_ru.cli:app"  # скрипт для CLI с дефисом, но импорт внутри пакета с нижним подчеркиванием
 
 [project.urls]
-Homepage = "https://github.com/ollxel/cinecli_ru"
-Documentation = "https://github.com/ollxel/cinecli_ru#readme"
-Repository = "https://github.com/ollxel/cinecli_ru.git"
-"Bug Tracker" = "https://github.com/ollxel/cinecli_ru/issues"
+Homepage = "https://github.com/ollxel/cinecli-ru"
+Documentation = "https://github.com/ollxel/cinecli-ru#readme"
+Repository = "https://github.com/ollxel/cinecli-ru.git"
+"Bug Tracker" = "https://github.com/ollxel/cinecli-ru/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]
