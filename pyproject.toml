@@ -1,0 +1,74 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cinecli-ru"  # имя для PyPI, может быть с дефисом
+version = "0.2.2"
+description = "🎬 CineCLI — Search and stream movies from Rutracker directly in your terminal"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "CineCLI Contributors"}]
+keywords = ["cli", "movie", "streaming", "torrent", "rutracker", "webtorrent", "mpv"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: Russian",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Utilities",
+]
+
+dependencies = [
+    "typer>=0.24.0",
+    "rich>=14.3.0",
+    "beautifulsoup4>=4.14.0",
+    "rutracker-api>=0.22.0",
+    "requests>=2.31.0",
+    "lxml>=4.9.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4.0", "pytest-cov>=4.1.0", "black>=23.0.0", "ruff>=0.1.0", "mypy>=1.0.0"]
+
+[project.scripts]
+cinecli-ru = "cinecli_ru.cli:app"  # скрипт для CLI с дефисом, но импорт внутри пакета с нижним подчеркиванием
+
+[project.urls]
+Homepage = "https://github.com/ollxel/cinecli_ru"
+Documentation = "https://github.com/ollxel/cinecli_ru#readme"
+Repository = "https://github.com/ollxel/cinecli_ru.git"
+"Bug Tracker" = "https://github.com/ollxel/cinecli_ru/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cinecli_ru"]  # строго имя папки пакета, без *
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312", "py313", "py314"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
