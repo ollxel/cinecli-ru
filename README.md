@@ -1,4 +1,6 @@
-# CineCLI v0.1.5
+[English README](README.md) | [Russian README](README_RU.md)
+
+# CineCLI v0.2.6
 
 CLI tool for searching and streaming movies from Rutracker directly in your terminal using mpv and webtorrent.
 
@@ -23,7 +25,7 @@ CLI tool for searching and streaming movies from Rutracker directly in your term
 ### Step 1: Python package
 
 ```bash
-pip install cinecli
+pip install cinecli-ru
 ```
 
 ### Step 2: System dependencies
@@ -95,9 +97,9 @@ Tip: You can use a browser extension to export cookies automatically.
 ### Search torrents
 
 ```bash
-cinecli search matrix
-cinecli search "enemy at the gates" --limit 10
-cinecli search avatar -n 5
+cinecli-ru search matrix
+cinecli-ru search "enemy at the gates" --limit 10
+cinecli-ru search avatar -n 5
 ```
 
 ### Watch directly (main command)
@@ -105,8 +107,8 @@ cinecli search avatar -n 5
 Searches, automatically selects the best torrent, and starts streaming.
 
 ```bash
-cinecli watch matrix
-cinecli watch dune --limit 10
+cinecli-ru watch matrix
+cinecli-ru watch dune --limit 10
 ```
 
 Selection can be manual if auto-selection is disabled in the prompt.
@@ -129,7 +131,7 @@ Available actions:
 ### Interactive mode
 
 ```bash
-cinecli interactive
+cinecli-ru interactive
 ```
 
 How it works:
@@ -148,8 +150,8 @@ How it works:
 Examples:
 
 ```bash
-cinecli search "blade runner" --limit 5
-cinecli watch inception -n 15
+cinecli-ru search "blade runner" --limit 5
+cinecli-ru watch inception -n 15
 ```
 
 ## Streaming Quality
@@ -280,7 +282,7 @@ Select number [0-19]: 5
 ### Scenario 3: Get a magnet link for a torrent client
 
 ```bash
-$ cinecli get 6677988
+$ cinecli-ru get 6677988
 
 Action [stream/magnet/page/skip]: magnet
 
